@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muhammad Raafey Tariq — AI Full-Stack Developer </title>
+<meta name="description" content="AI Full-Stack Developer in Cologne building production LLM systems and agentic AI pipelines across Python, TypeScript and C#.">
+<meta name="theme-color" content="#000000">
+<meta name="color-scheme" content="dark">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Muhammad Raafey Tariq — AI Software Engineer">
+<meta property="og:description" content="Building production LLM systems and agentic AI pipelines in Cologne — Python, TypeScript, C#, LangChain, Azure, AWS.">
+<meta property="og:image" content="og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Muhammad Raafey Tariq — AI Software Engineer">
+<meta name="twitter:description" content="Building production LLM systems and agentic AI pipelines in Cologne.">
+<meta name="twitter:image" content="og-image.png">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Person",
+  "name":"Muhammad Raafey Tariq",
+  "jobTitle":"AI Software Engineer",
+  "email":"mailto:raafeytariq@gmail.com",
+  "address":{"@type":"PostalAddress","addressLocality":"Cologne","addressCountry":"DE"},
+  "sameAs":["https://linkedin.com/in/raafey","https://github.com/raafey"],
+  "alumniOf":[
+    {"@type":"CollegeOrUniversity","name":"Technische Universität Dortmund"},
+    {"@type":"CollegeOrUniversity","name":"FAST National University"}
+  ],
+  "knowsAbout":["Large Language Models","Agentic AI","Python","TypeScript","C#","LangChain","RAG","Azure","AWS"]
+}
+</script>
+<style>
+  /* ===== APPLE DARK TOKENS (dark-only) ===== */
+  :root{
+    color-scheme:dark;
+    --text:#f5f5f7; --text-2:#86868b; --text-3:#6e6e73;
+    --accent:#2997ff; --accent-h:#4aa8ff;
+    --cta:#0071e3; --cta-h:#0077ed;
+    --bg:#000000; --bg-alt:#000000; --card-1:#161617; --card-2:#161617; --modal-bg:#1d1d1f;
+    --hairline:rgba(255,255,255,0.10); --divider:#424245;
+    --chip:rgba(255,255,255,0.10); --chip-h:rgba(255,255,255,0.18);
+    --frost-nav:rgba(0,0,0,0.72); --frost-modal:rgba(0,0,0,0.6);
+    --logo-mark-bg:#2c2c2e; --avatar-bg:#2c2c2e; --live:#34c759;
+    --shadow-card:0 1px 3px rgba(0,0,0,0.5);
+    --ease:cubic-bezier(0.25,0.1,0.25,1); --spring:cubic-bezier(0.28,0.11,0.32,1);
+    --nav-h:48px; --maxw:980px; --maxw-wide:1200px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+  html{scroll-behavior:smooth;}
+  body{font-family:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    background:var(--bg);color:var(--text);font-size:17px;line-height:1.47;font-weight:400;letter-spacing:-0.022em;
+    -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;}
+
+  /* ===== NAV ===== */
+  .nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);
+    background:var(--frost-nav);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);
+    border-bottom:1px solid var(--hairline);transition:background .4s var(--ease),border-color .4s var(--ease);}
+  .nav-inner{max-width:var(--maxw-wide);height:100%;margin:0 auto;padding:0 22px;display:flex;align-items:center;gap:16px;}
+  .brand{font-size:17px;font-weight:600;letter-spacing:-0.02em;text-decoration:none;color:var(--text);flex-shrink:0;}
+  .tabs{display:flex;gap:6px;margin:0 auto;overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none;}
+  .tabs::-webkit-scrollbar{display:none;}
+  .tabs a{position:relative;color:var(--text-2);text-decoration:none;font-size:14px;font-weight:400;white-space:nowrap;padding:6px 11px;border-radius:8px;transition:color .3s var(--ease);}
+  .tabs a:hover{color:var(--text);}
+  .tabs a.active{color:var(--accent);}
+  .nav-right{display:flex;align-items:center;gap:14px;flex-shrink:0;}
+
+  /* ===== BUTTONS ===== */
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:none;cursor:pointer;text-decoration:none;background:var(--cta);color:#fff;font-size:17px;font-weight:400;line-height:1.18;padding:12px 22px;border-radius:980px;transition:all .3s var(--ease);}
+  .btn:hover{background:var(--cta-h);}
+  .btn:active{transform:scale(0.96);}
+  .btn--sm{font-size:14px;padding:7px 16px;}
+  .btn--secondary{background:transparent;border:1px solid var(--accent);color:var(--accent);}
+  .btn--secondary:hover{background:rgba(41,151,255,0.1);}
+  .icon-btn{display:inline-flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:var(--chip);color:var(--text);text-decoration:none;transition:all .3s var(--ease);}
+  .icon-btn:hover{background:var(--accent);color:#fff;}
+  .icon-btn:active{transform:scale(0.94);}
+  .icon-btn svg{width:20px;height:20px;display:block;}
+
+  /* ===== SECTIONS ===== */
+  .section{padding:clamp(76px,10vw,132px) 0;}
+  .section--alt{background:var(--bg-alt);}
+  .container{max-width:var(--maxw);margin:0 auto;padding:0 22px;}
+  .container--wide{max-width:var(--maxw-wide);margin:0 auto;padding:0 22px;}
+  .section-head{text-align:center;max-width:720px;margin:0 auto clamp(44px,6vw,64px);}
+  .headline{font-size:clamp(32px,5vw,56px);font-weight:600;line-height:1.08;letter-spacing:-0.019em;}
+  .subhead{font-size:clamp(19px,2.4vw,24px);font-weight:400;line-height:1.4;color:var(--text-2);margin-top:14px;}
+
+  /* ===== HERO ===== */
+  .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;box-sizing:border-box;padding:calc(var(--nav-h) + 24px) 0 44px;position:relative;overflow:hidden;}
+  .hero-aurora{position:absolute;inset:-25% -10%;z-index:0;pointer-events:none;filter:blur(90px);opacity:0.5;
+    background:radial-gradient(38% 38% at 28% 36%,rgba(41,151,255,0.30),transparent 60%),radial-gradient(34% 34% at 72% 56%,rgba(125,58,232,0.26),transparent 60%),radial-gradient(28% 28% at 55% 80%,rgba(255,60,140,0.14),transparent 60%);
+    animation:auroraDrift 20s ease-in-out infinite alternate;}
+  @keyframes auroraDrift{0%{transform:translate3d(-3%,-2%,0) scale(1);}50%{transform:translate3d(3%,2%,0) scale(1.12);}100%{transform:translate3d(-2%,3%,0) scale(1.06);}}
+  .rotate{color:var(--text);transition:opacity .4s var(--ease);}
+  .hero-inner{max-width:1160px;margin:0 auto;padding:0 22px;display:flex;align-items:center;gap:clamp(48px,6vw,96px);position:relative;z-index:1;}
+  .pfp-wrap{flex-shrink:0;}
+  .hero-text{flex:1;min-width:0;}
+  .pfp{position:relative;width:clamp(260px,32vw,400px);height:clamp(260px,32vw,400px);border-radius:clamp(28px,4vw,44px);overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.5);will-change:transform,opacity;transform-origin:center;}
+  .pfp-sheen{position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .35s var(--ease);background:radial-gradient(circle at var(--mx,50%) var(--my,30%), rgba(255,255,255,0.28), rgba(255,255,255,0) 42%);mix-blend-mode:screen;}
+  .pfp .avatar{position:absolute;inset:0;display:grid;place-items:center;background:var(--avatar-bg);color:#fff;font-size:48px;font-weight:600;letter-spacing:-0.03em;}
+  .pfp img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+  .hero h1{font-size:clamp(32px,4.4vw,52px);font-weight:600;line-height:1.06;letter-spacing:-0.01em;white-space:nowrap;}
+  .hero .role{font-size:clamp(19px,2.6vw,26px);font-weight:400;color:var(--text-2);line-height:1.35;margin-top:12px;}
+  .hero .intro{font-size:clamp(17px,1.6vw,19px);line-height:1.55;color:var(--text-2);max-width:600px;margin:24px 0 0;}
+  .hero .intro b{color:var(--text);font-weight:600;}
+  .pills{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-start;margin-top:28px;}
+  .pill{display:inline-flex;align-items:center;gap:6px;background:var(--chip);color:var(--text-2);padding:7px 14px;border-radius:980px;font-size:14px;}
+  .pill svg{width:14px;height:14px;opacity:.7;}
+  .pill.live{color:var(--live);background:rgba(48,209,88,0.14);}
+  .pill.live .dot{width:7px;height:7px;border-radius:50%;background:var(--live);}
+  .cta-row{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:flex-start;margin-top:34px;}
+  @media (max-width:820px){
+    .hero{min-height:auto;justify-content:flex-start;padding:calc(var(--nav-h) + 40px) 0 52px;}
+    .hero-inner{flex-direction:column;text-align:center;gap:30px;}
+    .hero h1{white-space:normal;font-size:clamp(34px,8vw,48px);}
+    .pfp{width:clamp(170px,46vw,260px);height:clamp(170px,46vw,260px);}
+    .hero .intro{margin-left:auto;margin-right:auto;}
+    .pills{justify-content:center;}
+    .cta-row{justify-content:center;}
+  }
+
+  /* ===== EXPERIENCE ===== */
+  .exp-grid{display:block;}
+  .exp-list{display:flex;flex-direction:column;gap:16px;}
+  .exp-card{background:var(--card-2);border-radius:22px;padding:clamp(22px,3vw,30px);box-shadow:var(--shadow-card);}
+  .exp-card .head{display:flex;gap:16px;align-items:flex-start;}
+  .logo{position:relative;width:50px;height:50px;border-radius:13px;flex-shrink:0;overflow:hidden;box-shadow:0 3px 10px rgba(0,0,0,.15);}
+  .logo .logo-mark{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-weight:700;font-size:18px;letter-spacing:-0.02em;background:var(--logo-mark-bg);}
+  .logo img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;background:#fff;padding:7px;}
+  .head-txt{flex:1;min-width:0;}
+  .job-top{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:baseline;}
+  .job-title{font-size:19px;font-weight:600;letter-spacing:-0.022em;}
+  .job-co{font-size:15px;color:var(--text-2);margin-top:2px;}
+  .job-date{font-size:14px;color:var(--text-3);white-space:nowrap;font-variant-numeric:tabular-nums;}
+  .bullets{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:10px;}
+  .bullets li{font-size:16px;color:var(--text-2);line-height:1.5;padding-left:20px;position:relative;}
+  .bullets li::before{content:"";position:absolute;left:2px;top:9px;width:5px;height:5px;border-radius:50%;background:var(--text-2);opacity:.6;}
+  .bullets b{color:var(--text);font-weight:600;}
+
+  /* ===== CARDS ===== */
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(248px,1fr));gap:18px;}
+  .card{background:var(--card-1);border-radius:22px;padding:28px;cursor:pointer;transition:transform .25s var(--ease),box-shadow .4s var(--spring);position:relative;overflow:hidden;transform-style:preserve-3d;}
+  .card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s var(--ease);background:radial-gradient(420px circle at var(--cx,50%) var(--cy,50%),rgba(255,255,255,0.09),transparent 42%);}
+  .card:hover::before{opacity:1;}
+  .section--alt .card{background:var(--card-2);box-shadow:var(--shadow-card);}
+  .card:hover{transform:translateY(-6px);box-shadow:0 8px 28px rgba(0,0,0,0.4);}
+  .card:active{transform:translateY(-2px) scale(0.99);}
+  .card-ico{width:56px;height:56px;border-radius:15px;display:grid;place-items:center;color:#fff;margin-bottom:18px;}
+  .card-ico svg{width:29px;height:29px;}
+  .card h3{font-size:20px;font-weight:600;letter-spacing:-0.022em;}
+  .card p{font-size:15px;color:var(--text-2);line-height:1.5;margin-top:8px;}
+  .card .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px;}
+  .tag{font-size:12px;color:var(--text-2);background:var(--chip);padding:4px 10px;border-radius:980px;}
+  .card .more{position:absolute;top:24px;right:24px;color:var(--accent);font-size:13px;opacity:0;transition:opacity .3s var(--ease);}
+  .card:hover .more{opacity:1;}
+  .g-blue{background:linear-gradient(145deg,#0a84ff,#0040dd);}.g-red{background:linear-gradient(145deg,#ff5e3a,#d80f3b);}.g-purple{background:linear-gradient(145deg,#bf5af2,#7d2ae8);}.g-green{background:linear-gradient(145deg,#30d158,#0a9c4a);}.g-orange{background:linear-gradient(145deg,#ff9f0a,#ff5e3a);}.g-teal{background:linear-gradient(145deg,#32ade6,#0a84ff);}.g-pink{background:linear-gradient(145deg,#ff2d92,#ff5e3a);}.g-indigo{background:linear-gradient(145deg,#5e5ce6,#3634a3);}
+
+  /* ===== GROUPED LIST ===== */
+  .group{background:var(--card-1);border-radius:22px;overflow:hidden;}
+  .section--alt .group{background:var(--card-2);box-shadow:var(--shadow-card);}
+  .grow{padding:18px 26px;border-bottom:1px solid var(--divider);}
+  .grow:last-child{border-bottom:none;}
+  .skill-row{display:flex;gap:18px;align-items:flex-start;}
+  .skill-head{display:flex;align-items:center;gap:12px;min-width:200px;flex-shrink:0;}
+  .skill-ico{width:32px;height:32px;border-radius:9px;display:grid;place-items:center;color:#fff;flex-shrink:0;box-shadow:0 2px 8px rgba(0,0,0,0.35);}
+  .skill-ico svg{width:18px;height:18px;}
+  .skill-row .k{font-size:16px;font-weight:600;}
+  .skill-row .v{font-size:16px;color:var(--text-2);line-height:1.5;}
+  .edu-row{display:flex;gap:16px;align-items:flex-start;}
+  .edu-main{flex:1;min-width:0;}
+  .edu-row .note{font-size:14px;color:var(--text-2);line-height:1.5;margin-top:10px;}
+  .grade{font-size:14px;color:var(--text-2);margin-top:8px;}
+  .courses{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+  .course{font-size:12.5px;color:var(--text-2);background:var(--chip);border:1px solid var(--hairline);padding:5px 12px;border-radius:980px;}
+  @media (max-width:560px){ .skill-row{flex-direction:column;gap:8px;} .skill-head{min-width:0;} }
+
+  footer{background:var(--bg-alt);text-align:center;padding:44px 22px 60px;}
+  footer p{font-size:13px;color:var(--text-3);}
+  .foot-links{display:flex;flex-wrap:wrap;gap:6px 22px;justify-content:center;margin-bottom:22px;}
+  .foot-links a{color:var(--text-2);text-decoration:none;font-size:14px;transition:color .3s var(--ease);}
+  .foot-links a:hover{color:var(--text);}
+  .foot-social{display:flex;gap:12px;justify-content:center;margin-bottom:24px;}
+  .foot-social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--chip);color:var(--text);transition:all .3s var(--ease);}
+  .foot-social a:hover{background:var(--accent);color:#fff;}
+  .foot-social svg{width:18px;height:18px;}
+  .to-top{position:fixed;right:22px;bottom:22px;z-index:90;width:46px;height:46px;border-radius:50%;border:1px solid var(--hairline);background:var(--frost-nav);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);color:var(--text);display:grid;place-items:center;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(10px);transition:all .35s var(--ease);}
+  .to-top.show{opacity:1;visibility:visible;transform:none;}
+  .to-top:hover{background:var(--accent);border-color:var(--accent);color:#fff;}
+  .to-top svg{width:20px;height:20px;}
+  .stats-band{padding:clamp(54px,8vw,86px) 0;}
+  .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;}
+  .stat-num{font-size:clamp(40px,6vw,62px);font-weight:600;letter-spacing:-0.02em;line-height:1;font-variant-numeric:tabular-nums;background:linear-gradient(180deg,#fff,#8a8a90);-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .stat-label{font-size:14px;color:var(--text-2);margin-top:10px;}
+  @media (max-width:680px){ .stats-grid{grid-template-columns:repeat(2,1fr);gap:34px 16px;} }
+
+  /* card definition via subtle border */
+  .card,.exp-card,.group,.modal-card{border:1px solid var(--hairline);}
+
+  /* ===== REVEAL ===== */
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--spring),transform .8s var(--spring);}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ===== MODAL ===== */
+  .modal{position:fixed;inset:0;z-index:200;display:flex;align-items:center;justify-content:center;padding:24px;visibility:hidden;transition:visibility 0s linear .4s;}
+  .modal.open{visibility:visible;transition-delay:0s;}
+  .modal-backdrop{position:fixed;inset:0;background:rgba(0,0,0,0);-webkit-backdrop-filter:saturate(180%) blur(0px);backdrop-filter:saturate(180%) blur(0px);transition:background .4s var(--ease),-webkit-backdrop-filter .4s var(--ease),backdrop-filter .4s var(--ease);}
+  .modal.open .modal-backdrop{background:var(--frost-modal);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);}
+  .modal-card{position:relative;z-index:1;width:100%;max-width:620px;max-height:86vh;overflow-y:auto;background:var(--modal-bg);border-radius:28px;padding:40px 38px 34px;box-shadow:0 30px 80px rgba(0,0,0,0.3);opacity:0;transform:scale(0.94) translateY(12px);transition:transform .45s var(--spring),opacity .35s var(--ease);}
+  .modal.open .modal-card{opacity:1;transform:none;}
+  .modal-handle{display:none;}
+  .modal-close{position:absolute;top:22px;right:22px;width:32px;height:32px;border:none;cursor:pointer;border-radius:50%;background:var(--chip);color:var(--text-2);font-size:15px;display:grid;place-items:center;transition:all .3s var(--ease);}
+  .modal-close:hover{background:var(--chip-h);color:var(--text);}
+  .modal-ico{width:66px;height:66px;border-radius:17px;display:grid;place-items:center;color:#fff;margin-bottom:20px;}
+  .modal-ico svg{width:35px;height:35px;}
+  .modal-kicker{font-size:13px;font-weight:600;color:var(--accent);letter-spacing:0.01em;}
+  .modal-title{font-size:clamp(26px,4vw,34px);font-weight:700;letter-spacing:-0.025em;line-height:1.1;margin-top:6px;}
+  .modal-body{margin-top:18px;}
+  .modal-body p{font-size:17px;line-height:1.55;color:var(--text-2);margin-bottom:14px;}
+  .modal-body .hl-label{font-size:13px;font-weight:600;color:var(--text);letter-spacing:0.01em;margin:22px 0 10px;}
+  .modal-body ul{list-style:none;display:flex;flex-direction:column;gap:9px;}
+  .modal-body li{font-size:16px;color:var(--text);padding-left:22px;position:relative;}
+  .modal-body li::before{content:"";position:absolute;left:4px;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent);}
+  .modal-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px;}
+
+  @media (min-width:1024px){
+    .exp-grid{display:grid;grid-template-columns:300px 1fr;gap:60px;align-items:start;}
+    .exp-grid .section-head{position:sticky;top:calc(var(--nav-h) + 40px);text-align:left;margin:0;max-width:none;}
+  }
+  @media (max-width:600px){
+    .nav-inner{gap:10px;padding:0 16px;} .brand{display:none;}
+    .grid{grid-template-columns:1fr;}
+    .modal{align-items:flex-end;padding:0;}
+    .modal-card{max-width:100%;border-radius:24px 24px 0 0;max-height:90vh;padding:16px 24px 30px;transform:translateY(100%);}
+    .modal.open .modal-card{transform:none;}
+    .modal-handle{display:block;width:38px;height:5px;border-radius:3px;background:var(--text-2);opacity:.4;margin:2px auto 16px;}
+    .modal-close{top:16px;}
+    .logo{width:44px;height:44px;border-radius:11px;} .logo .logo-mark{font-size:16px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto;}
+    .reveal{opacity:1;transform:none;transition:none;}
+    .modal-card{transition:opacity .2s;}
+    .hero-aurora{animation:none;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#about">Muhammad Raafey Tariq</a>
+    <div class="tabs" id="tabs">
+      <a href="#about">About</a>
+      <a href="#work">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#academic">Research</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+    </div>
+    <div class="nav-right">
+      <a class="btn btn--sm" href="Muhammad_Raafey_Tariq_CV.pdf" download>CV</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="about">
+  <div class="hero-aurora"></div>
+  <div class="hero-inner" data-stagger>
+    <div class="pfp-wrap reveal">
+      <div class="pfp">
+        <div class="avatar">RT</div>
+        <img src="profile.jpg" alt="Muhammad Raafey Tariq" onerror="this.remove();">
+        <div class="pfp-sheen"></div>
+      </div>
+    </div>
+    <div class="hero-text">
+    <h1 class="reveal">Muhammad Raafey Tariq</h1>
+    <div class="role reveal">AI Full-Stack Developer building <span class="rotate" id="roleRotate">production LLM systems</span> in Cologne.</div>
+    <p class="intro reveal">For the past few years I've built the AI systems behind <b>Vidispine's</b> media platform — work where a model demo has to grow up into something that survives production traffic, enterprise SLAs, and a real monthly bill. I like the awkward middle of that: wrapping enough engineering around a non-deterministic model that a newsroom like <b>Al-Jazeera</b> or an institution like the <b>European Parliament</b> can depend on it.</p>
+    <div class="pills reveal">
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Cologne, Germany</span>
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg>EU Blue Card</span>
+      <span class="pill live"><span class="dot"></span>Open to roles</span>
+    </div>
+    <div class="cta-row reveal">
+      <a class="btn" href="Muhammad_Raafey_Tariq_CV.pdf" download>Download CV</a>
+      <a class="icon-btn" href="mailto:raafeytariq@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.2 2L12 12.2 19.8 7H4.2zM20 8.3l-7.4 4.95a1 1 0 0 1-1.2 0L4 8.3V17h16V8.3z"/></svg></a>
+      <a class="icon-btn" href="https://linkedin.com/in/raafey" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V9.99H6.01V17h2.33zM7.18 8.95a1.35 1.35 0 1 0 0-2.7 1.35 1.35 0 0 0 0 2.7zM18 17v-3.84c0-2.05-1.1-3-2.56-3-1.18 0-1.7.65-2 1.1V9.99H11.1V17h2.34v-3.9c0-.2.01-.4.07-.55.16-.4.53-.83 1.15-.83.81 0 1.13.62 1.13 1.52V17H18z"/></svg></a>
+      <a class="icon-btn" href="https://github.com/raafey" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.37-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></a>
+    </div>
+    </div>
+  </div>
+</header>
+
+<section class="section stats-band" id="stats">
+  <div class="container">
+    <div class="stats-grid" data-stagger>
+      <div class="stat reveal"><div class="stat-num" data-target="5">0</div><div class="stat-label">Enterprise customers on VCS</div></div>
+      <div class="stat reveal"><div class="stat-num" data-target="7">0</div><div class="stat-label">AI providers unified</div></div>
+      <div class="stat reveal"><div class="stat-num" data-target="1000" data-suffix="+">0</div><div class="stat-label">Inference tasks / month</div></div>
+      <div class="stat reveal"><div class="stat-num" data-target="24">0</div><div class="stat-label">Languages shipped</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="work">
+  <div class="container">
+    <div class="exp-grid">
+      <div class="section-head reveal">
+        <h2 class="headline">Built for production.</h2>
+        <p class="subhead">Five years turning AI prototypes into systems enterprises depend on.</p>
+      </div>
+      <div class="exp-list" data-stagger>
+        <article class="exp-card reveal">
+          <div class="head"><div class="logo"><span class="logo-mark">V</span><img src="logos/vidispine.svg" alt="Vidispine" onerror="this.remove();"></div>
+            <div class="head-txt"><div class="job-top"><div><div class="job-title">Advanced Full-Stack Developer, AI Systems</div><div class="job-co">Vidispine GmbH (Lumine Group) · formerly Arvato Systems</div></div><div class="job-date">Oct 2024 — Present</div></div></div></div>
+          <ul class="bullets">
+            <li>Designed and shipped <b>Vidinet Cognitive Services (VCS)</b>, the production AI backend powering MediaPortal and now used by 5 enterprise customers — REST APIs in FastAPI and C# consolidating 7 LLM and vision providers behind a unified contract.</li>
+            <li>Designed and shipped <b>AutoNewsGPT</b> for Al-Jazeera end-to-end: an agentic pipeline of GPT tool use, a TTS voice analyzer, and the Twelve Labs Pegasus video model that cuts an hour-plus editorial process to ~30 seconds.</li>
+            <li>Integrated non-deterministic AI inference into the Vidiflow BPMN workflow engine via AWS Lambda and RabbitMQ, orchestrating 1,000+ inference tasks per month without breaking throughput SLAs.</li>
+            <li>Implemented observability across 6 FastAPI and Node.js services, cutting mean time to debug multi-step pipeline failures from hours to minutes.</li>
+            <li>Led the React/TypeScript revamp of MediaPortal, shipping multilingual metadata across 24 languages and a SKOS-based semantic API to the European Parliament.</li>
+            <li>Maintained CI/CD pipelines on Azure DevOps and containerised AWS deployments across all environments.</li>
+          </ul>
+        </article>
+        <article class="exp-card reveal">
+          <div class="head"><div class="logo"><span class="logo-mark">A</span><img src="logos/arvato.svg" alt="Arvato Systems" onerror="this.remove();"></div>
+            <div class="head-txt"><div class="job-top"><div><div class="job-title">Working Student, AI &amp; Software Engineering</div><div class="job-co">Arvato Systems, Bertelsmann SE &amp; Co. KGaA</div></div><div class="job-date">Oct 2021 — Oct 2024</div></div></div></div>
+          <ul class="bullets">
+            <li>Master's thesis <b>AutoCut GPT</b>: an LLM-as-controller agent that plans tasks, selects models via function calling, and produces annotated video highlights — F1 0.96 on task-plan structure.</li>
+            <li>Built a production LangChain service in C# (MapReduce &amp; MapRefine) for RAG over documents exceeding 128,000 tokens.</li>
+            <li>Engineered vector similarity search on Azure Functions + Cosmos DB as a drop-in Elasticsearch alternative, cutting cost ~$80→$5/mo.</li>
+            <li>Built a GPT-powered knowledge-graph PoC extracting clinical insights from 5,000+ unstructured health records.</li>
+            <li>Developed <b>Mediagraph</b>, combining BERT NER with Wikidata entity linking to auto-enrich metadata for 1,000+ video assets.</li>
+            <li>Authored Terraform IaC modules automating 20+ Azure resources across 3 environments.</li>
+          </ul>
+        </article>
+        <article class="exp-card reveal">
+          <div class="head"><div class="logo"><span class="logo-mark">Q</span><img src="logos/quant.jpg" alt="Quant Data Solutions" onerror="this.remove();"></div>
+            <div class="head-txt"><div class="job-top"><div><div class="job-title">Data Scientist</div><div class="job-co">Quant Data Solutions</div></div><div class="job-date">Feb 2021 — Apr 2021</div></div></div></div>
+          <ul class="bullets"><li>Built a low-latency order-book imbalance signal engine in C++ with sub-microsecond processing, plus Python feature engineering on financial time-series.</li></ul>
+        </article>
+        <article class="exp-card reveal">
+          <div class="head"><div class="logo"><span class="logo-mark">AX</span><img src="logos/auditxprt.png" alt="AuditXprt" onerror="this.remove();"></div>
+            <div class="head-txt"><div class="job-top"><div><div class="job-title">Associate Software Engineer</div><div class="job-co">AuditXprt Inc</div></div><div class="job-date">Jun 2020 — Jan 2021</div></div></div></div>
+          <ul class="bullets"><li>Owned a document-compliance product for AIA Singapore — OCR-to-classification pipelines via Django REST, with parallel OCR cutting turnaround from hours to minutes.</li></ul>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="projects">
+  <div class="container--wide">
+    <div class="section-head reveal"><h2 class="headline">Things I've shipped.</h2><p class="subhead">Production systems and the engineering in between. Select any project to look closer.</p></div>
+    <div class="grid" data-stagger>
+      <article class="card reveal" data-modal="vcs"><span class="more">Details ›</span><div class="card-ico g-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/></svg></div><h3>Vidinet Cognitive Services</h3><p>Production AI backend unifying 7 LLM &amp; vision providers behind one contract.</p><div class="tags"><span class="tag">FastAPI</span><span class="tag">C#</span><span class="tag">Multi-provider</span></div></article>
+      <article class="card reveal" data-modal="autonews"><span class="more">Details ›</span><div class="card-ico g-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16l-4-2-4 2-4-2-4 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/></svg></div><h3>AutoNewsGPT</h3><p>Agentic pipeline for Al-Jazeera turning raw footage into news highlights in ~30 seconds.</p><div class="tags"><span class="tag">Agentic AI</span><span class="tag">Twelve Labs</span><span class="tag">TTS</span></div></article>
+      <article class="card reveal" data-modal="autocut"><span class="more">Details ›</span><div class="card-ico g-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg></div><h3>AutoCut GPT</h3><p>Master's thesis. LLM-as-controller agent that plans tasks and picks models. F1 0.96.</p><div class="tags"><span class="tag">FastAPI</span><span class="tag">LLM</span><span class="tag">Agent Eval</span></div></article>
+      <article class="card reveal" data-modal="langchain"><span class="more">Details ›</span><div class="card-ico g-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><h3>LangChain RAG Service</h3><p>C# service with MapReduce &amp; MapRefine for RAG over documents exceeding 128k tokens.</p><div class="tags"><span class="tag">C#</span><span class="tag">LangChain</span><span class="tag">RAG</span></div></article>
+      <article class="card reveal" data-modal="cosmos"><span class="more">Details ›</span><div class="card-ico g-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></div><h3>Cosmos Vector Search</h3><p>Vector search on Azure Functions + Cosmos DB replacing Elasticsearch — cost ~$80→$5/mo.</p><div class="tags"><span class="tag">Azure</span><span class="tag">Cosmos DB</span><span class="tag">Vectors</span></div></article>
+      <article class="card reveal" data-modal="mediagraph"><span class="more">Details ›</span><div class="card-ico g-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M6.8 7.6l4 8.4M17.2 7.6l-4 8.4M7 6h10"/></svg></div><h3>Mediagraph</h3><p>BERT NER + Wikidata entity linking to auto-enrich metadata for 1,000+ video assets.</p><div class="tags"><span class="tag">BERT</span><span class="tag">spaCy</span><span class="tag">Wikidata</span></div></article>
+      <article class="card reveal" data-modal="clinicalkg"><span class="more">Details ›</span><div class="card-ico g-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v6m0 8v6M2 12h6m8 0h6"/><circle cx="12" cy="12" r="3"/></svg></div><h3>Clinical KG Enrichment</h3><p>GPT-powered PoC turning 5,000+ unstructured health records into graph-ready insights.</p><div class="tags"><span class="tag">GPT</span><span class="tag">Knowledge Graph</span><span class="tag">NLP</span></div></article>
+      <article class="card reveal" data-modal="vidiflow"><span class="more">Details ›</span><div class="card-ico g-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/></svg></div><h3>Vidiflow AI Orchestration</h3><p>Brought non-deterministic inference into a BPMN engine via Lambda + RabbitMQ at SLA.</p><div class="tags"><span class="tag">AWS Lambda</span><span class="tag">RabbitMQ</span><span class="tag">BPMN</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="academic">
+  <div class="container--wide">
+    <div class="section-head reveal"><h2 class="headline">Before production, research.</h2><p class="subhead">The academic work that shaped how I build.</p></div>
+    <div class="grid" data-stagger>
+      <article class="card reveal" data-modal="bta"><span class="more">Details ›</span><div class="card-ico g-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h3>BTA Deep-Hole Drilling</h3><p>Multivariate sensor analysis for chattering root-cause, with a real-time early-warning system.</p><div class="tags"><span class="tag">Time Series</span><span class="tag">Anomaly Detection</span></div></article>
+      <article class="card reveal" data-modal="bp"><span class="more">Details ›</span><div class="card-ico g-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><h3>Blood Pressure Prediction</h3><p>Feature engineering on the Styrian Health dataset, comparing regression against decision trees.</p><div class="tags"><span class="tag">Regression</span><span class="tag">scikit-learn</span></div></article>
+      <article class="card reveal" data-modal="siamese"><span class="more">Details ›</span><div class="card-ico g-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/></svg></div><h3>One-Shot Siamese Networks</h3><p>Metric learning on a sparse dataset, reaching 97% test accuracy.</p><div class="tags"><span class="tag">Metric Learning</span><span class="tag">PyTorch</span></div></article>
+      <article class="card reveal" data-modal="embeddings"><span class="more">Details ›</span><div class="card-ico g-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div><h3>Word Embeddings for Urdu</h3><p>Bachelor's thesis comparing fastText, word2vec, GloVe, ELMo &amp; BERT on Urdu corpora.</p><div class="tags"><span class="tag">NLP</span><span class="tag">Embeddings</span><span class="tag">BERT</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-head reveal"><h2 class="headline">The whole stack.</h2><p class="subhead">What I reach for, from model to deployment.</p></div>
+    <div class="group" data-stagger>
+      <div class="grow skill-row reveal"><div class="skill-head"><span class="skill-ico g-blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6"/></svg></span><span class="k">Programming</span></div><span class="v">Python, TypeScript, JavaScript (Node.js), C#, R</span></div>
+      <div class="grow skill-row reveal"><div class="skill-head"><span class="skill-ico g-purple"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg></span><span class="k">AI &amp; LLM</span></div><span class="v">Agentic architectures, tool use, function calling, RAG, LangChain, OpenAI, Anthropic, Gemini, Hugging Face, PyTorch, Scikit-learn, spaCy</span></div>
+      <div class="grow skill-row reveal"><div class="skill-head"><span class="skill-ico g-indigo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="2"/><circle cx="6" cy="18" r="2"/><circle cx="18" cy="12" r="2"/><path d="M8 6h4a4 4 0 0 1 4 4M8 18h4a4 4 0 0 0 4-4"/></svg></span><span class="k">Orchestration</span></div><span class="v">Multi-step inference pipelines, Camunda, RabbitMQ, knowledge graphs (Wikidata, SKOS), vector search</span></div>
+      <div class="grow skill-row reveal"><div class="skill-head"><span class="skill-ico g-pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></span><span class="k">Observability</span></div><span class="v">Application Insights, CloudWatch, structured logging, distributed tracing, agent evaluation</span></div>
+      <div class="grow skill-row reveal"><div class="skill-head"><span class="skill-ico g-orange"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg></span><span class="k">Databases</span></div><span class="v">Cosmos DB (vector), MongoDB, PostgreSQL, MySQL</span></div>
+      <div class="grow skill-row reveal"><div class="skill-head"><span class="skill-ico g-teal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></span><span class="k">Cloud &amp; DevOps</span></div><span class="v">Azure, AWS, GCP, Docker, Terraform, GitHub Actions, Azure DevOps</span></div>
+      <div class="grow skill-row reveal"><div class="skill-head"><span class="skill-ico g-green"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></span><span class="k">Frontend</span></div><span class="v">React, Node.js, HTML, CSS</span></div>
+      <div class="grow skill-row reveal"><div class="skill-head"><span class="skill-ico g-red"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></span><span class="k">Languages</span></div><span class="v">English (C1), German (A1, learning), Urdu (Native)</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" id="education">
+  <div class="container">
+    <div class="section-head reveal"><h2 class="headline">Foundations.</h2><p class="subhead">Where the fundamentals come from.</p></div>
+    <div class="group" data-stagger>
+      <div class="grow edu-row reveal"><div class="logo"><span class="logo-mark">TU</span><img src="logos/tu-dortmund.svg" alt="TU Dortmund" onerror="this.remove();"></div><div class="edu-main"><div class="job-top"><div><div class="job-title">M.Sc. Data Science</div><div class="job-co">Technische Universität Dortmund, Germany</div></div><div class="job-date">2021 — 2024</div></div><div class="grade">Final grade 1.9 (German scale)</div><div class="courses"><span class="course">Deep Learning</span><span class="course">Big Data Analytics</span><span class="course">Advanced Statistical Learning</span><span class="course">Computational Intelligence</span><span class="course">Industrial Data Science</span><span class="course">Bioinformatics &amp; Toxicology</span></div></div></div>
+      <div class="grow edu-row reveal"><div class="logo"><span class="logo-mark">F</span><img src="logos/fast.png" alt="FAST National University" onerror="this.remove();"></div><div class="edu-main"><div class="job-top"><div><div class="job-title">B.Sc. Computer Science</div><div class="job-co">FAST National University, Pakistan</div></div><div class="job-date">2016 — 2020</div></div><div class="grade">CGPA 3.5 / 4.0</div><div class="courses"><span class="course">Data Mining</span><span class="course">Deep Learning</span><span class="course">Artificial Intelligence</span><span class="course">Multi-Agent Systems</span><span class="course">Cloud Computing</span><span class="course">Probability &amp; Statistics</span><span class="course">Linear Algebra</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <nav class="foot-links">
+    <a href="#about">About</a>
+    <a href="#work">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#academic">Research</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="Muhammad_Raafey_Tariq_CV.pdf" download>CV</a>
+  </nav>
+  <div class="foot-social">
+    <a href="mailto:raafeytariq@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1.2 2L12 12.2 19.8 7H4.2zM20 8.3l-7.4 4.95a1 1 0 0 1-1.2 0L4 8.3V17h16V8.3z"/></svg></a>
+    <a href="https://linkedin.com/in/raafey" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 17V9.99H6.01V17h2.33zM7.18 8.95a1.35 1.35 0 1 0 0-2.7 1.35 1.35 0 0 0 0 2.7zM18 17v-3.84c0-2.05-1.1-3-2.56-3-1.18 0-1.7.65-2 1.1V9.99H11.1V17h2.34v-3.9c0-.2.01-.4.07-.55.16-.4.53-.83 1.15-.83.81 0 1.13.62 1.13 1.52V17H18z"/></svg></a>
+    <a href="https://github.com/raafey" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49l-.01-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.89 1.57 2.34 1.12 2.91.85.09-.66.35-1.12.63-1.37-2.22-.26-4.55-1.14-4.55-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.75 1.05a9.36 9.36 0 0 1 5 0c1.91-1.32 2.75-1.05 2.75-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.8-4.57 5.05.36.32.68.94.68 1.9l-.01 2.82c0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg></a>
+  </div>
+  <p>© <span id="yr"></span> Muhammad Raafey Tariq · Cologne, Germany</p>
+</footer>
+<button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-handle"></div>
+    <button class="modal-close" data-close aria-label="Close">✕</button>
+    <div class="modal-ico" id="modalIco"></div>
+    <div class="modal-kicker" id="modalKicker"></div>
+    <h2 class="modal-title" id="modalTitle"></h2>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-tags" id="modalTags"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var el=e.target;
+        if(el.hasAttribute('data-stagger')){
+          el.querySelectorAll('.reveal').forEach(function(k,i){ setTimeout(function(){k.classList.add('in');}, i*80); });
+        } else { el.classList.add('in'); }
+        io.unobserve(el);
+      });
+    },{threshold:0.15, rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('[data-stagger]').forEach(function(el){ io.observe(el); });
+    Array.prototype.slice.call(document.querySelectorAll('.reveal')).filter(function(el){return !el.closest('[data-stagger]');}).forEach(function(el){ io.observe(el); });
+  } else { document.querySelectorAll('.reveal').forEach(function(el){ el.classList.add('in'); }); }
+
+  var tabs=document.querySelectorAll('#tabs a');
+  var secs=['about','work','projects','academic','skills','education'].map(function(id){return document.getElementById(id);});
+  var ticking=false;
+  function spy(){
+    var pos=(window.scrollY||0)+window.innerHeight*0.35, cur='about';
+    secs.forEach(function(s){ if(s){ var t=s.getBoundingClientRect().top+window.scrollY; if(t<=pos) cur=s.id; } });
+    tabs.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href')==='#'+cur); });
+    ticking=false;
+  }
+  var hero=document.getElementById('about'), pfp=document.querySelector('.pfp'), sheen=pfp?pfp.querySelector('.pfp-sheen'):null;
+  var scrollP=0, tgtX=0, tgtY=0, curX=0, curY=0, pointerActive=false, animating=false;
+  function bigScreen(){ return window.innerWidth>=821 && !reduce; }
+  function renderPfp(){
+    if(!pfp||!bigScreen()) return;
+    var rx=scrollP*6+curX, ry=scrollP*-3+curY, ty=scrollP*46, sc=1+scrollP*0.06;
+    pfp.style.transform='perspective(900px) translateY('+ty.toFixed(1)+'px) rotateX('+rx.toFixed(2)+'deg) rotateY('+ry.toFixed(2)+'deg) scale('+sc.toFixed(3)+')';
+    pfp.style.opacity=(1-scrollP*0.5).toFixed(3);
+  }
+  function loop(){
+    curX+=(tgtX-curX)*0.12; curY+=(tgtY-curY)*0.12;
+    renderPfp();
+    if(pointerActive || Math.abs(tgtX-curX)>0.02 || Math.abs(tgtY-curY)>0.02){ requestAnimationFrame(loop); }
+    else { animating=false; }
+  }
+  function startLoop(){ if(!animating){ animating=true; requestAnimationFrame(loop); } }
+  if(hero && pfp){
+    hero.addEventListener('pointermove',function(e){
+      if(!bigScreen()) return;
+      pointerActive=true;
+      var hr=hero.getBoundingClientRect();
+      var nx=Math.max(-1,Math.min(1,(e.clientX-(hr.left+hr.width/2))/(hr.width/2)));
+      var ny=Math.max(-1,Math.min(1,(e.clientY-(hr.top+hr.height/2))/(hr.height/2)));
+      tgtY=nx*7; tgtX=-ny*7;
+      if(sheen){ var pr=pfp.getBoundingClientRect();
+        pfp.style.setProperty('--mx',Math.max(0,Math.min(100,(e.clientX-pr.left)/pr.width*100)).toFixed(1)+'%');
+        pfp.style.setProperty('--my',Math.max(0,Math.min(100,(e.clientY-pr.top)/pr.height*100)).toFixed(1)+'%');
+        sheen.style.opacity='1';
+      }
+      startLoop();
+    });
+    hero.addEventListener('pointerleave',function(){ pointerActive=false; tgtX=0; tgtY=0; if(sheen) sheen.style.opacity='0'; startLoop(); });
+  }
+  if(window.DeviceOrientationEvent && pfp){
+    window.addEventListener('deviceorientation',function(e){
+      if(reduce||bigScreen()||e.gamma==null) return;
+      var nx=Math.max(-1,Math.min(1,e.gamma/28)), ny=Math.max(-1,Math.min(1,((e.beta||45)-45)/28));
+      pfp.style.transform='perspective(900px) rotateX('+(-ny*6).toFixed(2)+'deg) rotateY('+(nx*6).toFixed(2)+'deg)';
+    });
+  }
+  function onFrame(){ spy(); if(bigScreen()){ scrollP=Math.min(Math.max((window.scrollY||0)/((hero.offsetHeight||window.innerHeight)*0.85),0),1); renderPfp(); } }
+  window.addEventListener('scroll',function(){ if(!ticking){requestAnimationFrame(onFrame);ticking=true;} },{passive:true});
+  window.addEventListener('resize',function(){ scrollP=0; });
+  spy(); onFrame();
+
+  // count-up stats
+  function animateCount(el){
+    var target=parseFloat(el.getAttribute('data-target'))||0, suffix=el.getAttribute('data-suffix')||'', dur=1500, start=null;
+    function step(ts){ if(!start)start=ts; var p=Math.min((ts-start)/dur,1); var v=Math.round(target*(1-Math.pow(1-p,3))); el.textContent=v.toLocaleString()+suffix; if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+  }
+  var statNums=document.querySelectorAll('.stat-num');
+  if('IntersectionObserver' in window && !reduce){
+    var statIO=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){animateCount(e.target);statIO.unobserve(e.target);}});},{threshold:0.5});
+    statNums.forEach(function(el){ statIO.observe(el); });
+  } else {
+    statNums.forEach(function(el){ el.textContent=(parseFloat(el.getAttribute('data-target'))||0).toLocaleString()+(el.getAttribute('data-suffix')||''); });
+  }
+
+  // rotating role word
+  var roleEl=document.getElementById('roleRotate');
+  if(roleEl && !reduce){
+    var phrases=['production LLM systems','agentic AI pipelines','full-stack AI products','RAG &amp; retrieval systems'], ri=0;
+    setInterval(function(){ roleEl.style.opacity='0'; setTimeout(function(){ ri=(ri+1)%phrases.length; roleEl.innerHTML=phrases[ri]; roleEl.style.opacity='1'; },420); },2800);
+  }
+
+  // card cursor-spotlight + tilt
+  document.querySelectorAll('.card').forEach(function(card){
+    card.addEventListener('pointermove',function(e){
+      if(reduce||window.innerWidth<700) return;
+      var r=card.getBoundingClientRect(), px=(e.clientX-r.left)/r.width, py=(e.clientY-r.top)/r.height;
+      card.style.setProperty('--cx',(px*100).toFixed(1)+'%');
+      card.style.setProperty('--cy',(py*100).toFixed(1)+'%');
+      card.style.transform='translateY(-6px) perspective(800px) rotateX('+((0.5-py)*7).toFixed(2)+'deg) rotateY('+((px-0.5)*7).toFixed(2)+'deg)';
+    });
+    card.addEventListener('pointerleave',function(){ card.style.transform=''; });
+  });
+
+  // back to top
+  var toTop=document.getElementById('toTop');
+  if(toTop){
+    var topToggle=function(){ if((window.scrollY||0)>window.innerHeight*0.8){ toTop.classList.add('show'); } else { toTop.classList.remove('show'); } };
+    window.addEventListener('scroll',topToggle,{passive:true}); topToggle();
+    toTop.addEventListener('click',function(){ window.scrollTo({top:0,behavior:reduce?'auto':'smooth'}); });
+  }
+
+  var I={db:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18M15 3v18M3 9h18M3 15h18"/>',news:'<path d="M4 22V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v16l-4-2-4 2-4-2-4 2z"/><line x1="8" y1="7" x2="16" y2="7"/><line x1="8" y1="11" x2="16" y2="11"/>',play:'<polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/>',book:'<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>',cyl:'<ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/>',graph:'<circle cx="5" cy="6" r="2.5"/><circle cx="19" cy="6" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M6.8 7.6l4 8.4M17.2 7.6l-4 8.4M7 6h10"/>',atom:'<path d="M12 2v6m0 8v6M2 12h6m8 0h6"/><circle cx="12" cy="12" r="3"/>',chart:'<path d="M3 3v18h18"/><path d="M7 14l3-3 3 3 5-6"/>',pulse:'<path d="M3 12h4l3 8 4-16 3 8h4"/>',pulse2:'<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',link:'<circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M9 6h6a3 3 0 0 1 3 3v6"/>'};
+  function hl(items){return '<div class="hl-label">Highlights</div><ul>'+items.map(function(x){return '<li>'+x+'</li>';}).join('')+'</ul>';}
+  var P={
+    vcs:{g:'g-blue',svg:I.db,kicker:'Vidispine · Production',title:'Vidinet Cognitive Services',body:'<p>Every product team that wanted to add AI was rebuilding the same plumbing — authentication, retries, rate-limit handling, response normalisation — separately for each vendor. There was no shared view of cost or latency, and switching a provider meant rewriting client code.</p><p>VCS solves that with a single REST contract in FastAPI and C# sitting in front of seven LLM and vision providers — OpenAI, Anthropic, Gemini, Twelve Labs, DeepVA, Amazon Rekognition and Amazon Transcribe. It normalises request and response schemas, centralises credentials and back-off logic, and lets a client swap one model for another without touching their integration. It is the backend behind MediaPortal and is now relied on by five enterprise customers.</p>'+hl(['Unified contract across 7 LLM &amp; vision providers','FastAPI + C#, containerised on Azure/AWS','Powers MediaPortal for 5 enterprise customers','Central point for cost &amp; latency observability']),tags:['FastAPI','C#','OpenAI','Anthropic','Gemini','Twelve Labs']},
+    autonews:{g:'g-red',svg:I.news,kicker:'Al-Jazeera · Production',title:'AutoNewsGPT',body:'<p>Al-Jazeera\'s editors were spending well over an hour turning raw footage into a short, broadcast-ready highlight package — watching source clips, choosing the moments, and assembling a cut by hand.</p><p>AutoNewsGPT replaces that with an agentic pipeline. GPT drives the workflow through tool use and function calling: it pulls in five or more source videos, uses the Twelve Labs Pegasus video-understanding model to locate the salient segments, runs a TTS voice analyser for narration cues, and assembles a 2–3 minute package automatically. What took an hour-plus now takes roughly thirty seconds, with consistent, repeatable output.</p>'+hl(['Agentic GPT controller with tool use','Twelve Labs Pegasus video understanding','~1 hour → ~30 seconds per package','Owned end-to-end, architecture to production']),tags:['Agentic AI','Function Calling','Twelve Labs','TTS','GPT']},
+    autocut:{g:'g-purple',svg:I.play,kicker:'TU Dortmund · Master\'s Thesis',title:'AutoCut GPT',body:'<p>My Master\'s thesis asked a question: instead of a human choosing and chaining the right deep-learning models to produce a video highlight, could an LLM do that planning itself from a plain-language prompt?</p><p>AutoCut GPT is an agentic system where the LLM acts as an autonomous reasoning controller. Given a prompt it builds a task plan, selects models from a registry via function calling, and orchestrates a multi-step inference pipeline to produce annotated highlights — exposed as a scalable FastAPI service. I also built a systematic evaluation framework scoring plan validity, tool-selection accuracy and output quality.</p>'+hl(['LLM-as-controller with a model registry','Function-calling model selection','FastAPI service with a custom agent-eval framework','F1 0.96 on task-plan structure, 0.91 on task inputs']),tags:['FastAPI','LLM Agents','Function Calling','Evaluation']},
+    langchain:{g:'g-green',svg:I.book,kicker:'Vidispine · Production',title:'LangChain RAG Service',body:'<p>Some documents — hundreds of pages, well past 128,000 tokens — simply do not fit in a model\'s context window, which blocked a set of summarisation and QA use cases entirely.</p><p>I built a production LangChain service in C# implementing both MapReduce and MapRefine strategies. MapReduce processes chunks independently and combines the results; MapRefine carries an evolving answer through the document sequentially. Together they make RAG-style processing of very long documents practical, unblocking work that was previously infeasible under token limits.</p>'+hl(['MapReduce &amp; MapRefine strategies','Implemented in C# / LangChain','Handles 128k+ token documents','Production RAG over hundreds of pages']),tags:['C#','LangChain','RAG','Summarisation']},
+    cosmos:{g:'g-orange',svg:I.cyl,kicker:'Vidispine · Production',title:'Cosmos Vector Search',body:'<p>Semantic search was running on a dedicated vector-search service that cost around $80 a month — more than the workload justified.</p><p>I built vector similarity search directly on Azure Functions and Cosmos DB as a drop-in replacement for Elasticsearch: storing embeddings and running similarity queries within infrastructure we already operated. It preserved semantic recall while cutting the recurring cost to roughly $5 a month.</p>'+hl(['Drop-in Elasticsearch alternative','Azure Functions + Cosmos DB','~$80 → ~$5 per month','Semantic recall preserved']),tags:['Azure','Cosmos DB','Vector Search','Embeddings']},
+    mediagraph:{g:'g-teal',svg:I.graph,kicker:'Proof of Concept',title:'Mediagraph',body:'<p>Tagging a large video library by hand is slow and inconsistent, and unstructured metadata is hard to search or filter.</p><p>Mediagraph combines BERT-based Named Entity Recognition to pull entities out of asset text with Wikidata entity linking to resolve each one to a canonical identifier. The result is structured, machine-readable metadata generated automatically across more than a thousand video assets, removing the bulk of the manual tagging overhead.</p>'+hl(['BERT-based NER + Wikidata entity linking','Canonical entity IDs from free text','1,000+ video assets enriched','Automated metadata at scale']),tags:['BERT','spaCy','Wikidata','NER']},
+    clinicalkg:{g:'g-pink',svg:I.atom,kicker:'Proof of Concept',title:'Clinical Knowledge-Graph Enrichment',body:'<p>Five thousand-plus health records held valuable clinical insight, but it was locked inside free text and unusable for structured analysis.</p><p>This GPT-powered proof of concept extracts, labels and classifies clinical insights from those unstructured records and shapes the output — entities and the relationships between them — for ingestion into a graph database, turning prose into a queryable knowledge graph.</p>'+hl(['GPT extraction, labelling &amp; classification','5,000+ unstructured health records','Entity + relationship modelling','Graph-database-ready output']),tags:['GPT','Knowledge Graph','NLP','Healthcare']},
+    vidiflow:{g:'g-indigo',svg:I.chart,kicker:'Vidispine · Production',title:'Vidiflow AI Orchestration',body:'<p>BPMN workflow engines assume each step is deterministic and quick. LLM and multimodal inference is neither — it is variable in both output and latency — so dropping it into an enterprise media workflow risks breaking throughput SLAs.</p><p>I integrated inference into the Vidiflow BPMN engine using a poll-process-respond pattern over AWS Lambda and RabbitMQ. The engine fires a request and continues; the inference runs asynchronously and reports back, so from the workflow\'s point of view the non-deterministic step behaves like any other reliable, observable task.</p>'+hl(['Poll-process-respond pattern','AWS Lambda + RabbitMQ','1,000+ inference tasks per month','SLA-safe non-deterministic steps']),tags:['AWS Lambda','RabbitMQ','BPMN','Camunda']},
+    bta:{g:'g-orange',svg:I.pulse,kicker:'TU Dortmund · Industrial Data Science',title:'BTA Deep-Hole Drilling',body:'<p>In BTA deep-hole drilling, an instability called chattering degrades the bore and can damage tooling. The warning signs are buried in correlated, fast-moving sensor channels.</p><p>I analysed these multivariate industrial sensor streams to identify the conditions that precede chattering, then built a real-time, threshold-based early-warning system that flags onset before it does damage — combining time-series feature analysis with root-cause identification across coupled signals.</p>'+hl(['Multivariate sensor-stream analysis','Root-cause identification for chattering','Real-time threshold early-warning system','Industrial time-series']),tags:['Time Series','Sensors','Anomaly Detection']},
+    bp:{g:'g-red',svg:I.pulse2,kicker:'TU Dortmund · Research',title:'Blood Pressure Prediction',body:'<p>Using the Styrian Health dataset, this project predicted blood pressure from a set of health and lifestyle features.</p><p>The focus was on feature engineering and a careful comparison between a linear regression model and a decision tree — weighing the interpretability and bias-variance trade-offs of each against predictive accuracy.</p>'+hl(['Styrian Health dataset','Feature engineering pipeline','Linear regression vs decision tree','Interpretability vs accuracy trade-offs']),tags:['Regression','Feature Engineering','scikit-learn']},
+    siamese:{g:'g-teal',svg:I.link,kicker:'Research',title:'One-Shot Learning with Siamese Networks',body:'<p>When you only have a handful of examples per class, standard classifiers struggle. This project tackled that with metric learning.</p><p>I trained a Siamese network to learn an embedding space where similar items sit close together, so new classes can be recognised from very few examples by comparing distances rather than retraining. On a deliberately sparse dataset it reached 97% test accuracy.</p>'+hl(['Siamese network architecture','Metric / one-shot learning','Recognises new classes from few examples','97% test accuracy on a sparse dataset']),tags:['Metric Learning','PyTorch','Computer Vision']},
+    embeddings:{g:'g-purple',svg:I.book,kicker:'FAST · Bachelor\'s Thesis',title:'Word Embeddings for Urdu',body:'<p>My Bachelor\'s thesis looked at how well different word-embedding methods handle Urdu and Roman-Urdu — a low-resource, morphologically rich, often code-mixed language that most embedding research overlooks.</p><p>I ran a comparative analysis of fastText, word2vec, GloVe, ELMo and BERT, benchmarking them on WordSim and SimLex similarity tasks and on downstream sentiment classification, to see which approaches degrade gracefully when the language and the data are messy.</p>'+hl(['fastText, word2vec, GloVe, ELMo, BERT','Roman-Urdu &amp; Urdu corpora','WordSim &amp; SimLex + sentiment benchmarks','Low-resource, code-mixed NLP']),tags:['NLP','Embeddings','BERT','ELMo']}
+  };
+  var modal=document.getElementById('modal');
+  var mIco=document.getElementById('modalIco'),mKick=document.getElementById('modalKicker'),mTitle=document.getElementById('modalTitle'),mBody=document.getElementById('modalBody'),mTags=document.getElementById('modalTags');
+  function openModal(id){var p=P[id];if(!p)return;mIco.className='modal-ico '+p.g;mIco.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+p.svg+'</svg>';mKick.textContent=p.kicker;mTitle.textContent=p.title;mBody.innerHTML=p.body;mTags.innerHTML=p.tags.map(function(t){return '<span class="tag">'+t+'</span>';}).join('');modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';modal.querySelector('.modal-card').scrollTop=0;}
+  function closeModal(){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  document.querySelectorAll('[data-modal]').forEach(function(c){c.addEventListener('click',function(){openModal(c.dataset.modal);});});
+  modal.querySelectorAll('[data-close]').forEach(function(el){el.addEventListener('click',closeModal);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeModal();});
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
